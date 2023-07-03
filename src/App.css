@@ -1,3 +1,22 @@
 .main {
-  min-height: calc(100vh -169px);
+  min-height: calc(100vh - 169px);
+}
+
+.left-menu {
+  width: 250px;
+  min-height: 100vh;
+}
+
+.left-menu li {
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.carousel {
+  height: 60vh;
+}
+
+.carousel img {
+  height: 60vh;
 }
