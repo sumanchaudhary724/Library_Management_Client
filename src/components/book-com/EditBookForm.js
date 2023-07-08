@@ -97,7 +97,7 @@ export const EditBookForm = () => {
       ) : (
         <div className="py-3">
           <Link to="/books">
-            <Button variant="secondary">&lt; Back {_id}</Button>
+            <Button variant="secondary">&lt; Back</Button>
           </Link>
           <Form onSubmit={handleOnSubmit} className="mt-3">
             {inputs.map((item, i) => (
