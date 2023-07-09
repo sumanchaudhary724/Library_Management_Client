@@ -19,12 +19,14 @@ import { useDispatch } from "react-redux";
 import { fetchBookAction } from "./pages/books/bookAction";
 import { EditBookForm } from "./components/book-com/EditBookForm";
 import BookLanding from "./pages/books/BookLanding";
+import { fetchBurrowAction } from "./pages/burrow-history/burrowAction";
 
 function App() {
   const dispatch = useDispatch();
   //fetch book
   useEffect(() => {
     dispatch(fetchBookAction());
+    dispatch(fetchBurrowAction());
   }, [dispatch]);
 
   return (
