@@ -15,8 +15,7 @@ export const addBurrowAction = (obj) => async (dispatch) => {
 };
 
 export const fetchBurrowAction = () => async (dispatch) => {
-  const { status, message, burrows } = await fetchBurrow();
+  const { status, message, burrowHistory } = await fetchBurrow();
   console.log(status, message);
-
-  dispatch(setBurrow(burrows));
+  dispatch(setBurrow(burrowHistory));
 };
