@@ -5,6 +5,8 @@ import bookReducer from "./pages/books/bookSlice";
 import burrowReducer from "./pages/burrow-history/burrowSlice";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage for web
+import systemReducer from "./system/systemSlice";
+import reviewReducer from "./pages/review/reviewSlice";
 
 const userPresistConfig = {
   key: "userInfo",
@@ -17,6 +19,8 @@ const store = configureStore({
     userInfo: persistedUserReducer,
     bookInfo: bookReducer,
     burrowInfo: burrowReducer,
+    system: systemReducer,
+    reviewInfo: reviewReducer,
   },
 });
 

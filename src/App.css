@@ -21,13 +21,19 @@
   height: 60vh;
 }
 
+.review {
+  display: flex;
+
+  /* flex-wrap: wrap; */
+}
+
 .left-name {
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   width: 100px;
   height: 100px;
   border-radius: 50%;
   font-size: 2rem;
-  background: rgb(55, 55, 217);
+  background: #0d6398;
   color: white;
 
   display: flex;
@@ -35,6 +41,6 @@
   align-items: center;
 }
 
-.right-review {
-  width: calc(100%);
+.rigt-review {
+  width: calc(100% - 100px);
 }

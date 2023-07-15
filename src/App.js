@@ -19,14 +19,15 @@ import { useDispatch } from "react-redux";
 import { fetchBookAction } from "./pages/books/bookAction";
 import { EditBookForm } from "./components/book-com/EditBookForm";
 import BookLanding from "./pages/books/BookLanding";
-import { fetchBurrowAction } from "./pages/burrow-history/burrowAction";
+import { fetchReviewAction } from "./pages/review/reviewAction";
+import Reviews from "./pages/review/Reviews";
 
 function App() {
   const dispatch = useDispatch();
   //fetch book
   useEffect(() => {
     dispatch(fetchBookAction());
-    dispatch(fetchBurrowAction());
+    dispatch(fetchReviewAction());
   }, [dispatch]);
 
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/book/:_id" element={<BookLanding />} />
+
         {/* // private routes */}
         <Route
           path="/dashboard"
@@ -63,6 +65,7 @@ function App() {
             </PrivateRoute>
           }
         />
+
         <Route
           path="/book/new"
           element={
@@ -76,6 +79,14 @@ function App() {
           element={
             <PrivateRoute>
               <EditBookForm />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/reviews"
+          element={
+            <PrivateRoute>
+              <Reviews />
             </PrivateRoute>
           }
         />
