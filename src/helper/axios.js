@@ -81,8 +81,11 @@ export const fetchBooks = async () => {
 
 export const updateBook = async (obj) => {
   try {
-    const { data } = await axios.put(bookAPI, obj);
-
+    const { data } = await axios.put(bookAPI, obj, {
+      headers: {
+        Authorization: getUserIdFromLocalStorage(),
+      },
+    });
     return data;
   } catch (error) {
     return {
