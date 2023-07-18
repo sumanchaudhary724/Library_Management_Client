@@ -33,11 +33,11 @@ const Home = () => {
           <Row>
             <Col>
               <div className="d-flex justify-content-between">
-                <div className="left">{display.length} books found</div>
+                <div className="left">{display.length} Books found</div>
                 <div className="right">
                   <Form.Control
                     onChange={handleOnSearch}
-                    placeholder="serach book by name"
+                    placeholder="Search book by name"
                   />
                 </div>
               </div>
