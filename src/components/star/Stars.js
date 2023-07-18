@@ -29,8 +29,13 @@ export const Stars = ({ num }) => {
 
   ///different apporach
 
-  const fs = Array(fullStarVal).fill(<AiFillStar className="text-warning " />);
-  const es = Array(emptyStar).fill(<AiOutlineStar />);
+  // const fs = Array(fullStarVal).fill(<AiFillStar className="text-warning " />);
+  // const es = Array(emptyStar).fill(<AiOutlineStar />);
+
+  const fs = Array.from({ length: fullStarVal }, () => (
+    <AiFillStar className="text-warning" />
+  ));
+  const es = Array.from({ length: emptyStar }, () => <AiOutlineStar />);
 
   return (
     <div className="fs-3">
