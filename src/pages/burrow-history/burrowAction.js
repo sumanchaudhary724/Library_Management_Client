@@ -10,7 +10,6 @@ export const addBurrowAction = (obj) => async (dispatch) => {
   if (status === "success") {
     //fetch user burrow
     dispatch(fetchBookAction());
-    dispatch(fetchBurrowAction());
   }
 };
 
