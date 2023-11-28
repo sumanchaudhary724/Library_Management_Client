@@ -23,6 +23,8 @@ export const fetchBurrowAction = () => async (dispatch) => {
 export const returnBurrowAction = (obj) => async (dispatch) => {
   const { status, message } = await returnBurrow(obj);
 
+  toast[status](message);
+
   if (status === "success") {
     //fetch user burrow
 
