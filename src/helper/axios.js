@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const rootAPI = "http://localhost:8000";
+const rootAPI = process.env.REACT_APP_BACKEND_URL || "http://localhost:8000";
 const userAPI = rootAPI + "/api/v1/user";
 const bookAPI = rootAPI + "/api/v1/book";
 const burrowAPI = rootAPI + "/api/v1/burrow";
